@@ -15,6 +15,8 @@
     --saveIconSize: calc(28px - clamp(0px, 0.657vw + -2.465px, 7px));
 
     --backgroundColorCards: #fff;
+    --labelColor: rgb(0 0 0 / 0.5);
+    --labelStrokeColor: rgb(255 255 255 / 0.5);
 
     --bordersColor: #000;
 }

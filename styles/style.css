@@ -43,16 +43,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  inline-size: var(--blockWidth);
-  block-size: var(--headerHeight);
+  gap: 20px;
   border: none;
   box-shadow: inset 0 0 0 2px var(--bordersColor);
   font-family: var(--accentFont);
   text-transform: uppercase;
   background-color: var(--backgroundColorCards);
+  inline-size: var(--blockWidth);
+  block-size: var(--headerHeight);
   min-inline-size: 375px;
   min-block-size: 327px;
-  gap: 20px;
 }
 
 .header__header {
@@ -74,16 +74,16 @@
   flex-direction: column;
   width: var(--blockWidth);
   border: none;
-  box-shadow: inset 0 0 0 2px var(--bordersColor);
   padding: 2px;
+  box-shadow: inset 0 0 0 2px var(--bordersColor);
   background-color: var(--backgroundColorCards);
 }
 
 .main__list-item:last-child {
   align-self: center;
   width: fit-content;
-  box-shadow: none;
   padding: 0;
+  box-shadow: none;
 }
 
 .li-container {
@@ -91,25 +91,58 @@
 }
 
 .li__header {
-  font-variation-settings: var(--mainFontBlack);
+  border-bottom: 2px solid var(--bordersColor);
   padding: 4px 10px;
   font-size: 18px;
-  border-bottom: 2px solid var(--bordersColor);
   line-height: 22px;
+  font-variation-settings: var(--mainFontBlack);
 }
 
 .li__img {
-  width: var(--imageSize);
-  height: var(--imageSize);
-  object-fit: fill;
   align-self: center;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.image-container {
+  position: relative;
+  height: fit-content;
+  height: var(--imageSize);
+}
+
+.label-html {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: var(--labelColor);
+  font-family: var(--accentFont);
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow:
+    -1px 0 var(--labelStrokeColor),
+    0 1px var(--labelStrokeColor),
+    1px 0 var(--labelStrokeColor),
+    0 -1px var(--labelStrokeColor);
+  mix-blend-mode: hard-light;
+}
+
+@supports (
+  (text-stroke: 1px var(--labelStrokeColor)) or
+    (-webkit-text-stroke: 1px var(--labelStrokeColor))
+) {
+  .label-html {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--labelStrokeColor);
+    text-stroke: 1px var(--labelStrokeColor);
+  }
 }
 
 .li__text-container {
-  border-top: 2px solid var(--bordersColor);
   display: grid;
   grid-template-rows: repeat(3, min-content);
   gap: 25px;
+  border-top: 2px solid var(--bordersColor);
   padding: 25px;
   font-size: 18px;
   line-height: 21px;
@@ -118,17 +151,31 @@
 .button-container {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+}
+
+.card__icon-button {
+  height: min-content;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0 12px 0 0;
+}
+
+.like-icon {
+  width: 27px;
+  height: 24px;
 }
 
 .card__like-button {
+  border: none;
+  box-shadow: inset 0 0 0 2px var(--bordersColor);
   font-family: var(--accentFont);
   font-size: 14px;
   line-height: 90%;
+  background-color: var(--backgroundColorCards);
   inline-size: 130px;
   block-size: 38px;
-  border: none;
-  box-shadow: inset 0 0 0 2px var(--bordersColor);
-  background-color: var(--backgroundColorCards);
 }
 
 .floppy-svg {
@@ -140,15 +187,15 @@
 }
 
 .save-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 18px;
   font-family: var(--accentFont);
   font-size: 14px;
   line-height: 90%;
   background-color: var(--backgroundColorCards);
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
   inline-size: var(--saveButtonWidth);
-  align-items: center;
-  justify-content: center;
-  padding: 15px 18px;
 }
