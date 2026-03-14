@@ -4,7 +4,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -121,7 +120,7 @@
   justify-content: flex-end;
 }
 
-.button-container__button {
+.card__like-button {
   font-family: var(--accentFont);
   font-size: 14px;
   line-height: 90%;
@@ -132,7 +131,7 @@
   background-color: var(--backgroundColorCards);
 }
 
-.svgABC {
+.floppy-svg {
   object-fit: contain;
   inline-size: 100%;
   block-size: 100%;
