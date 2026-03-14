@@ -44,7 +44,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: var(--blockWidthClamp);
+  inline-size: var(--blockWidth);
+  block-size: var(--headerHeight);
   border: none;
   box-shadow: inset 0 0 0 2px var(--bordersColor);
   font-family: var(--accentFont);
@@ -72,7 +73,7 @@
 .main__list-item {
   display: flex;
   flex-direction: column;
-  width: var(--blockWidthClamp);
+  width: var(--blockWidth);
   border: none;
   box-shadow: inset 0 0 0 2px var(--bordersColor);
   padding: 2px;
