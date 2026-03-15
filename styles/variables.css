@@ -14,6 +14,12 @@
     --saveButtonWidth: clamp(306px, 2.723vw + 295.789px, 335px);
     --saveIconSize: calc(28px - clamp(0px, 0.657vw + -2.465px, 7px));
 
+    --dialogWidth: clamp(341px, 1.127vw + 336.775px, 353px);
+    --dialogHeight: clamp(184px, 0.657vw + 181.535px, 191px);
+    --dialogOkBtnWidth: clamp(261px, 3.005vw + 249.732px, 293px);
+    --dialogOkBtnHeight: clamp(31px, 0.657vw + 28.535px, 38px);
+    --dialogSidePadding: calc(40px - clamp(0px, 0.939vw + -3.521px, 10px));
+
     --backgroundColorCards: #fff;
     --labelColor: rgb(0 0 0 / 0.5);
     --labelStrokeColor: rgb(255 255 255 / 0.5);
