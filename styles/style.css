@@ -203,6 +203,44 @@
   gap: 12px;
 }
 
+
+.main__list-item:nth-child(2) .li__img{
+  filter: contrast(153%);
+}
+
+.main__list-item:nth-child(3) .li__img{
+  filter: brightness(180%);
+}
+
+.main__list-item:nth-child(4) .li__img{
+  filter: blur(1.1rem);
+}
+
+.main__list-item:nth-child(5) .li__img{
+  filter: opacity(0.213);
+}
+
+.main__list-item:nth-child(6) .li__img{
+  filter: grayscale(0.527);
+}
+
+.main__list-item:nth-child(7) .li__img{
+  filter: saturate(6);
+}
+
+.main__list-item:nth-child(8) .li__img{
+  filter: hue-rotate(-130deg) sepia(30%);
+}
+
+
+
+
+
+
+
+
+
+
 .dialog {
   min-width: var(--dialogWidth);
   min-height: var(--dialogHeight);
