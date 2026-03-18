@@ -2,7 +2,7 @@
 
 :root {
     --mainFont: Inter-Variable, sans-serif;
-    --accentFont: PressStart2P, sans-serif;
+    --accentFont: PressStart2P, fantasy;
     --mainFontBlack: "wght" 715;
     --mainFontNormal: "wght" 410;
 
@@ -16,16 +16,14 @@
 
     --dialogWidth: clamp(341px, 1.127vw + 336.775px, 353px);
     --dialogHeight: clamp(184px, 0.657vw + 181.535px, 191px);
-    --dialogOkBtnWidth: clamp(261px, 3.005vw + 249.732px, 293px);
-    --dialogOkBtnHeight: clamp(31px, 0.657vw + 28.535px, 38px);
     --dialogSidePadding: calc(40px - clamp(0px, 0.939vw + -3.521px, 10px));
 
-    --backgroundColorCards: #fff;
+    --backColor: #fff;
+    --accentColor: #000;
+    
     --labelColor: rgb(0 0 0 / 0.5);
     --labelStrokeColor: rgb(255 255 255 / 0.5);
-
     --likeContourColor: #000;
     --likeFillColor: #f00;
 
-    --accentColor: #000;
 }
