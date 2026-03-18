@@ -86,10 +86,6 @@
   box-shadow: none;
 }
 
-.li-container {
-  background-color: var(--backgroundColorCards);
-}
-
 .li__header {
   border-bottom: 2px solid var(--accentColor);
   padding: 4px 10px;
@@ -105,7 +101,7 @@
   object-fit: fill;
 }
 
-.image-container {
+.img-container {
   position: relative;
   height: fit-content;
   height: var(--imageSize);
@@ -152,18 +148,20 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 6px;
 }
 
 .card__icon-button {
-  /* height: min-content; */
-  
-  block-size: 34px;
-  margin: 0 12px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
+  border: 2px solid transparent;
   padding: 0;
   background: transparent;
   transition: border 0.3s ease;
-  border: 2px solid transparent;
+  block-size: 38px;
+  inline-size: 39px;
 }
 
 .card__icon-button:focus {
@@ -174,14 +172,82 @@
   border: 2px solid var(--accentColor);
 }
 
+/* Первичная настройка сердечка */
 .like-icon {
-  width: 27px;
-  height: 24px;
+  transform-origin: center;
+  margin: -2px -2px;
+}
+
+.like-icon .sparks {
+  opacity: 0;
+}
+
+/* Настройка переходов */
+.like-icon .contour {
+  fill: var(--likeContourColor);
+  transition: fill 0.1s linear;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear 0s;
+}
+
+/* Настройка переходов при наведении */
+.like-icon:hover .core {
+  fill: var(--likeContourColor);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--likeContourColor);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Настройка переходов при зажатии */
+.like-icon:active .core {
+  fill: var(--likeFillColor);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--likeFillColor);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Настройка переходов при клике */
+.like-icon.is-liked .contour {
+  fill: var(--likeFillColor);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--likeFillColor);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--likeFillColor);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Добавление анимаций */
+.like-icon.is-liked {
+  animation: scaleHeart 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparkOpacity 0.3s ease-in 0.3s;
 }
 
 .card__like-button {
-  inline-size: 126px;
-  block-size: 34px;
+  inline-size: 130px;
+  block-size: 38px;
 }
 
 .floppy-svg {
@@ -233,7 +299,7 @@
 }
 
 .save-button {
-  padding: 15px 18px;
+  padding: 13px 16px;
   inline-size: var(--saveButtonWidth);
 }
 
@@ -242,7 +308,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
 }
 
 .main__list-item:nth-child(2) .li__img {
